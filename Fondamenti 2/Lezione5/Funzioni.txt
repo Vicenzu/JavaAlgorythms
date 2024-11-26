@@ -1,0 +1,34 @@
+Le funzioni vengono utilizzate per semplificare la scrittura del codice e vengono scritte NELLA CLASSE utilizzando
+la scrittura:
+
+public static void "nome_funzione" ('tipo' 'nome_variabile') {
+    //All'interno funziona proprio come un main
+
+}
+
+All'interno della funzione possiamo usare il return, ma ci sono due casi differenti:
+- se la funzione non restituisce nulla, allora il return finale è implicito nella funzione, ma lo si può comunque
+   usare per uscire prima dalla funzione (come se fosse un break)
+
+- se la funzione restituisce qualcosa allora DOBBIAMO utilizzare il return finale per restituire il valore, oppure
+   per uscire prima
+   
+
+*ESERCIZI
+1) Fare una funzione che preso in input un array d'interi restituisce il massimo
+    public static int massimo(int[] a) {
+        //supponiamo di scrivere del codice che alla fine assegna alla variabile max il massimo dei valori di a
+    }
+
+2) Fare una funzione che verifica se l'array è simmetrico
+
+    public static boolean simmetrico(int[] a) {
+
+    }
+
+3) Fare una funzione che restituisce la media dei valori presente nel vettore maggiore di x, se non ne esistono
+   restituisce 0
+
+   public static float media (int[] a, int x) {
+    //prende in input un array e un intero
+   }

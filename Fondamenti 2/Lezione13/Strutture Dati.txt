@@ -1,0 +1,20 @@
+La struttura dati "Lista Concatenata" può sostituire un array, utilizzando le classi
+A differenza dell'array si può ingrandire e accorciare a piacimento in maniera molto più semplice, 
+essendo una struttura dati dinamica rappresentata astrattamente come una sequenza di nodi (ogni nodo punta al 
+nodo successivo).
+
+La differenza sostanziale con gli array è che il puntatore tra i nodi della struttura dati è esplicito, mentre
+ negli array (il puntatore tra le celle) è fatto implicitamente e contiene l'indirizzo della cella successiva.
+
+Dunque nell'heap verrà creato uno spazio "nodo" con due celle, info e successore, nella cella info verrà inserito
+l'oggetto da mettere nella lista, nel successore l'indirizzo inizialmente sarà null, appena verrà creata un nuovo
+spazio nell'heap che contiene una nuova info, a quella precedente verrà sostituito null con l'indirizzo di memoria
+della nuova info.
+
+*HEAP*
+    //primo nodo
+    info    6           info    4        
+    succ    OX1111l  --->  succ    null
+
+Per accedere alla lunghezza della lista, astrattaemente partendo dal primo elemento conto quante volte posso passare
+a un successore, finchè non ne ho più.

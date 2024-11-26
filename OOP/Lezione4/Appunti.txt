@@ -1,0 +1,28 @@
+INHERITANCE - quando noi estendiamo una classe, vengono ereditati tutti i metodi PUBBLICI della classe.
+Se la superclasse ha altri tipi, verranno tutti ereditati nella classe dove usiamo l'extends.
+
+Inoltre si può utilizzare una volta sola, quindi praticamente non possiamo usare extends più di una volta,
+(possiamo avere max una SUPERCLASSE).
+
+Quando noi estendiamo una classe avrà un peso in memoria a differenza delle interfacce, quindi per esempio
+possiamo schematizzarle in questo modo:
+    -una parte dedicata alla classe Object
+    -una parte dedicata alla superclasse SC;
+    -una parte dedicata alla sottoclasse C;
+
+Dopo che l'oggetto viene istanziato in memoria, viene eseguita una catena di costruttori, a partire dal più
+generico a finire con quello più specifico.
+Quindi in un costruttore c'è una chiamata "super()" che invoca il costruttore della classe soprastante
+
+ATTENZIONE - non bisogna esporre un oggetto prima che la sua costruzione sia stata eseguita completamente,
+altrimenti rischiamo di far vedere all'esterno un oggetto inconsistente
+
+Ogni volta che creiamo una classe, java crea un'istanza nella classe Class di java, quindi getClass() ci
+restituisce l'istanza della classe Class.
+
+Se facciamo getClass() restituisce l'istanza della classe più specifica
+
+Se facciamo instanceof vede se l'oggetto è di una classe meno specifica (anche superclasse, Object)
+
+se per esempio facciamo "o instanceof CartesianPoint2D that" stiamo facendo il casting, quindi potremo evitare
+di fare "CartesianPoint2D c = o;"

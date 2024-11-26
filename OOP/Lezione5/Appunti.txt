@@ -1,0 +1,5 @@
+CLASSPATH - è una variabile di ambiente utilizzata dal compilatore e dall'interprete java per cercare le classi
+Si tratta di un elenco di percorsi
+
+FINAL - se aggiungo final in un metodo di una superclasse, esso non può essere overridden, dunque è più
+efficiente perché il compilatore sa che sarà quello il metodo da invocare, dato che nessuno lo può sovrascrivere

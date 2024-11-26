@@ -1,0 +1,82 @@
+ESERCIZI
+1) riscrivere add di doublelinkedcontainer con un solo puntatore
+2) implementare l'interfaccia Container tramite un array di Object (hint: arraycopy usando
+    lo stesso array come sorgente e come destinazione) con iteratore (banale)
+3) aggiungere a DoubleLinkedContainer metodo che restituisce un ListIterator
+    (hint: o introdurre altra inner class OPPURE modifico l'iteratore affinché sia anche listiterator,
+    implementando ListIterator invece che Iterator)
+
+
+
+
+
+
+--HASH TABLE--
+
+funzione di hashing - è una funzione che va da un dominio Object a int
+il metodo hashCode() di Object restituisce un intero basato sull'indirizzo di memoria
+La funzione hash deve essere fatta in modo che se due oggetti combaciano, la funzione restituisce lo stesso hash
+
+Se o1 e o2 non sono uguali, la probabilità che i loro hash combaciano deve essere molto piccola.
+
+es. hash di un intero è l'intero stesso
+
+La HashTable ci consente di avere accesso in o(1) in ogni caso, rinunciando però all'ordine.
+Si tratta di un'array di liste (liste di collisione), dimensionato solitamente come un numero
+primo (es. 23).
+Vado a posizionare gli oggetti in base ai loro hash (se l'oggetto o1 ha come hash 3, lo inserisco
+nella lista presente nella table in posizione 3). Se invece ho un oggetto il cui hash supera la
+dimensione della table, faccio semplicemente il modulo con la dimensione dell'Hash table
+e inserisco nella lista in posizione modulo.
+Ecco perché si chiamano liste di COLLISIONE (LinkedList), perché possono contenere più oggetti,
+anche aventi diversi hashcode.
+
+REGOLA (LOAD FACTOR): finché la table contiene meno del 75% di size,
+allora gli hashcode sono ben distribuiti, e quindi va bene perché funziona in o(1)
+
+Per cercare l'oggetto (es. un oggetto con hashcode 3), vado nel bucket 3 e faccio l'equals.
+
+Cosa succede quando si sovraccarica (si supera il 75%)? Si crea un altra HashTable di size
+maggiore e si ridistribuiscono i vari oggetti
+
+
+
+Interfaccia Set (erede di Collection) - NON POSSO AVERE DUPLICATI (ecco perché l'add di
+                                                                Collection restituisce un booleano)
+    -HashSet (che usa un Hash Table)
+
+Esiste anche la LinkedHashSet, che si porta dietro anche una LinkedList, per mantenere l'ordine
+in cui vengono aggiunti gli oggetti.
+
+
+Esiste anche la HashMap (Map - dizionario). Nelle map accedo all'elemento in base alla chiave
+    es. Map<String, Student>, dove String è il tipo della chiave e Student il tipo del valore
+
+        m.put("250469", <oggetto Student>)
+
+Importante: chiedendo i valori, mi viene restituita una Collection (perché possono esserci duplicati),
+mentre chiedo le chiavi mi restituisce un Set, perché sono univoche.
+
+La HashMap è un'implementazione della Map che usa una HashTable
+
+
+
+
+
+
+
+--ALBERI--
+La LinkedList, ad esempio, è una struttura dati lineare. Esiste invece l'Albero che invece NON è
+lineare. Da un nodo possono partire più puntatori. Il nodo principale è la radice, mentre gli altri
+sono detti foglie.
+Un particolare tipo di albero è l'albero binario, perché ogni nodo ha DUE figli.
+Esiste poi l'ALBERO BINARIO DI RICERCA, dove le informazioni contenute nei nodi devono rispettare
+la seguente proprietà: dato un nodo, tutti gli oggetti nel sottoalbero sinistro devono precedere
+l'informazione del nodo, mentre tutti quelli del sottoalbero destro devono succedere.
+Un albero è bilanciato quando la lunghezza dei sottoalberi destro e sinistro differiscono al più
+di uno. Quando un albero binario di ricerca è bilanciato, la ricerca mi costa log(n).
+
+Un TreeSet altro non è che un implementazione del Set basato sul Research Binary Tree.
+Nell'HashSet è importante che gli oggetti abbiano ben definito l'hashCode(), mentre nel TreeSet
+deve essere ben definito il confronto (o attraverso l'interfaccia Comparable, oppure passandogli
+un Comparator)

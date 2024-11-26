@@ -1,0 +1,42 @@
+Il metodo final può essere utilizzato anche per le classi, e ciò implica due cose:
+    - Nessun'altra classe può estendere la classe definita final (es. classe String)
+    - Tutti i metodi definiti in questa classe sono final, NON le variabili.
+
+Ogni volta che introduciamo una nuova classe, nella classe Class verrà creata una variabile d'istanza del tipo
+Employee.class. Dunque il metodo .getClass() ci restituisce il tipo più specifico, mentre instanceOf controlla
+se tra i tipi della variabile c'è quello richiesto.
+
+Le classi astratte possono estendere altre classi sia astratte che concrete e viceversa.
+
+Quando si ereditano i metodi di una classe, possiamo cambiare la visibilità dei metodi, ma SOLAMENTE allargando
+la visibilità (es. Superclasse metodo default, sottoclasse metodo public)
+
+Tra i livelli di visibilità, noi conosciamo private, default, public. Ne esiste un altro che cambia la
+visibilità nelle inheritance, la visibilità "protected" (si può ma non si deve fare mettere davanti alle variabili
+d'istanza, e si può fare per i metodi), ci permette di vedere ciò chè è protected anche in packages diversi
+
+Quindi ora l'ordine di visibilità cambia:
+    private, default, protected, public
+
+
+RELAZIONI (serve per l'equals)
+In una matrice di elementi, una relazione si dice:
+    - RIFLESSIVA se gli elementi sulla diagonale hanno le stesse proprietà, (x,x) appartengono a R (relazione)
+    - SIMMETRICA per x!=y (x,y) appartenenti a R -> (y,x) appartenenti a R
+    - TRANSITIVA per x!=y!=z, (x,y) appartententi a R && (y,z) appartenenti a R -> (x,z) appartenenti a R
+
+Facciamo l'equals per CartesianPoint2D
+@Override
+public boolean equals(Object o) {
+    if (o == null) return false;
+    if (o == this) return false;
+    //ora scegliamo noi se vogliamo che sia appartenente ad una specifica classe oppure anche alle sottoclassi
+    if (getClass() != o.getClass()) return false;
+    //oppure
+    if (o.getClass() != CartesianPoint2D) return false;
+    //facciamo il casting
+    CartesianPoint2D c = (CartesianPoint2D) o;
+    //confrontiamo tutti i campi che ci interessano...
+    ...
+    return true;
+}

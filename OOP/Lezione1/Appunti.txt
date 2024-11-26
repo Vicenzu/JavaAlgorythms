@@ -1,0 +1,5 @@
+PACKAGE - è uno spazio di nomi organizzato
+c'è un package che viene importato automaticamente (java.lang) che contiene classi tipo Math
+
+Se per esempio nel caso di Math lo dobbiamo scrivere tante volte possiamo utilizzare "import static java.lang.Math.*;" e
+ importeremo tutti i metodi statici della classe

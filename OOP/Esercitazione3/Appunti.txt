@@ -1,0 +1,1 @@
+In java, la gestione delle eccezioni avviene tramite i blocchi try, catch, finally

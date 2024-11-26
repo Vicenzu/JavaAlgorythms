@@ -1,0 +1,9 @@
+In Java possiamo rendere una classe "autoadattabile" utilizzando i "tipi generici"
+
+Per le Wrapper Classes cambierà il modo in cui sono allocate le variabili in memoria, poichè non potendo usare i
+tipi di base (perchè per esempio int nello stack mette direttamente un numero, a differenza delle stringhe che 
+nello stack hanno un indirizzo di memoria che punta a una porzione di heap). Quindi utilizzeremo queste classi 
+per fare in modo che i tipi di base lavorino come le stringhe in memoria
+
+Esercizi
+1) riscrivere la classe ListaConcatenata<> e Nodo<> in maniera generica (così sarà utilizzabile per tutti i tipi)

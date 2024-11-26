@@ -1,0 +1,6 @@
+Fare i controlli che gli array non siano null e che contengano almeno una cella
+
+1) scrivere un metodo ricorsivo che prende in input un array di stringhe e restituisce la lunghezza della
+sottosequenza di lunghezza massima ordinata in senso crescente. Le stringhe null vanno saltate
+
+    es. {"a", "b", "a", "e", "f", null, "c"}    ->  restituisce 3, ovvero la lunghezza di "a", "e", "f"

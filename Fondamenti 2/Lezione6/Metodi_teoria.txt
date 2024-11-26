@@ -1,0 +1,12 @@
+In java è possibile scrivere due metodi omonimi ma con numeri di argomenti presi in input diversi, questo 
+farà in modo che in base agli argomenti saranno metodi diversi.
+
+    public static void Metodo(int a)
+
+    public static void Metodo(int a, int b)
+
+1) Scrivere un metodo che prende come argometo una matrice e restituisce l'indice di una riga che contiene il 
+valore massimo presente nella matrice.
+
+2) Scrivere un metodo che prende come argomento una matrice e restituisce un vettore contenente gli indici delle 
+righe che contengono il valore massimo presente nella matrice.

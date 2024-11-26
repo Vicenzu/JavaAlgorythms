@@ -1,0 +1,23 @@
+Quando utilizziamo l'inheritance dobbiamo stare attenti a rispettare il principio di BARBARA LISKOV
+il cosiddetto principio di sostituibilità, che dice:
+Se abbiamo un tipo T e un sottotipo S, affinché lo sia realmente, deve valere questa proprietà:
+in ciascun punto in cui si attende un oggetto di tipo T è possibile fornire un oggetto di tipo S SENZA alterare
+il corretto funzionamento del sistema.
+(Quindi deve valere in tutto e per tutto la relazione "S is a T")
+
+Quando facciamo inheritance, dobbiamo assicurarci che la classe madre sia progettata affinchè altre sottoclassi
+ne facciano uso.
+
+Nel caso in cui volessimo lanciare un'eccezione è possibile creare un oggetto generico "E" e utilizzarlo
+ogni volta che dobbiamo lanciare un'eccezione
+
+Come sottoclassi di Throwable, abbiamo Error (indica un errore molto importante, anche al livello hardware),
+Exception (indica che ci sono dei problemi a livello di codice) che è erede di RuntimeException e
+altre(che ci possono dire per esempio che stiamo accedendo a file ai quali non siamo autorizzati).
+La classe RuntimeException è erede di Unchecked, mentre per tutte le altre classi sono eredi di Checked.
+Per le eccezioni Checked il programmatore NON può ignorarle, invece le Unchecked possono essere ignorate.
+
+Il blocco try, può essere seguito sia da catch che da finally, o anche da entrambe.
+Il catch() gestisce l'argomento contenuto all'interno delle parentesi e rimanda all'inizio del blocco,
+il finally invece viene eseguito comunque
+NON È CORRETTO UTILIZZARE IL GRUPPO TRY CATCH CON LE RUNTIMEEXCEPTION

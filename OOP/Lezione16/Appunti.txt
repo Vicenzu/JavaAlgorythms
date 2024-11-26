@@ -1,0 +1,39 @@
+Tutte le interfacce hanno un SOLO metodo astratto si chiamano INTERFACCE FUNZIONALI, perchè le istanze
+possono corrispondere a degli oggetti che portano con se delle funzioni (es. comparator, actionListener).
+Possiamo sostituire questi oggetti con delle ESPRESSIONI LAMBDA
+
+RIFERIMENTI A METODI (attraverso 3 forme sintattiche)
+1) Object :: instanceMethod
+    Es. System.out :: println   (Faccio riferimento al metodo println)
+    (dove System è una classe e out è una variabile statica)
+
+    Lo invoca sull'oggetto
+
+
+2) Class :: staticMethod
+    Es. Math :: max
+
+    Lo invoca sulla classe
+
+
+3) Class :: instanceMethod
+    Es. String :: compareTo
+
+    Lo invoca sul primo parametro
+
+
+4) Riferimento al costruttore di una classe
+    Es. String :: new
+
+ES.
+Abbiamo un metodo m che riceve un Comparator<String>
+
+    m (Comparator<String> c)
+
+Possiamo mettere al posto di "Comparator<String> c" una lambda expression
+
+    () -> {}
+
+Oppure possiamo invocarle in questa maniera
+
+    m(String :: compareTo)

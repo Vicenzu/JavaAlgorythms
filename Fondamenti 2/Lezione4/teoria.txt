@@ -1,0 +1,17 @@
+Un ARRAY/VETTORE è una sequenza di elementi tutti dello stesso tipo
+    es. int[] a;   si tratta di una variabile di tipo array contentente interi
+
+queste variabili vengono collocate nell'heap come a[0], a[1], a[i], dove i indica l'i-esimo elemento dell'array
+    
+    a[0] = 4;   accedo all'elemento in posizione 0 dell'array a, assegnandolo al valore 4
+
+ATTENZIONE!!
+Non si possono eseguire questi due comandi di fila, poichè non ho definito la dimensione dell'array.
+
+    int[] a;
+    a[0] = 4;
+
+bensì farò così:
+
+    int[] a = new int[3];   per farlo di 3 dimensioni -> (a[0], a[1], a[2]) 
+                                                        *a[1] dista 32-bit da a[0], e così via*

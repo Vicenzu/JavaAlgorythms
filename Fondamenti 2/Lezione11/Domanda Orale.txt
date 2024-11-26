@@ -1,0 +1,14 @@
+PRIMA DOMANDA DELL'ORALE DA SAPERE PEFFOOOOOOOZZA
+Se dobbiamo fare uno swap di variabili ma con gli OGGETTI come funziona?
+
+Persona p = new Persona("A", "B", 10);
+Persona q = new Persona();
+
+p = q;  // Questa non è una copia ma è una ALIASING
+
+quando andiamo a fare questa cosa stiamo andando cambiare il "puntatore" nell'Heap di p e quindi se cambieremo q 
+andremo a cambiare anche q
+
+Perciò per creare un nuovo oggetto uguale dovremo passare ogni parametro
+
+Persona k = new Persona(p.getNome(), p.getCognome(), p.getEta()); //questa è una copia

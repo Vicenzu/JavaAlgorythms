@@ -1,0 +1,18 @@
+Quando vengono create delle stringhe, nella memoria la creazione avviene in modo diverso
+
+    String s = "Ciao";
+
+quello che succede in memoria è che nello stack avremo l'indirizzo di memoria che punterà all'area dell'HEAP
+contenente la sequenza di caratteri di cui è composta la stringa (dunque vengono trattate come array di caratteri)
+
+Ma a differenza degli array NON è possibile accedere ad un carattere di una stringa facendo s[0]
+inoltre si possono stampare direttamente, diversamente dagli array
+
+
+Per tutti i tipi di Java che iniziano per lettera maiuscola per esempio (String), si possono usare tutte le 
+funzioni built-in di Java (per la lista delle funzioni built-in di java basta cercare su google)
+
+1) Scrivere un metodo che restituisce un booleano che verifica se due array sono uguali (come contenuto), prima
+assicurarsi che abbiano la stessa lunghezza
+
+2) Metodo che prende due vettori di stringhe e verifica se sono uguali
