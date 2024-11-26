@@ -1,0 +1,294 @@
+Index: oop_dimes/java/oop/garage/MantainibleVehicle.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/MantainibleVehicle.java b/oop_dimes/java/oop/garage/MantainibleVehicle.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/MantainibleVehicle.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,70 +0,0 @@
+-package oop.garage;
+-
+-public abstract class MantainibleVehicle implements Manutentable,Vehicle{
+-    private final int km;
+-    private int kmFromLastManutenction;
+-    private final int ruote;
+-    private final String marca;
+-    private final String modello;
+-    private final String targa;
+-    private String name;
+-
+-    public MantainibleVehicle(int km, int kmFromLastManutenction, int ruote, String marca, String modello, String targa) {
+-        this.km = km;
+-        this.kmFromLastManutenction = kmFromLastManutenction;
+-        this.ruote = ruote;
+-        this.marca = marca;
+-        this.modello = modello;
+-        this.targa = targa;
+-        this.name=name;
+-    }
+-
+-    @Override
+-    public String getName() {
+-        return name;
+-    }
+-
+-    @Override
+-    public int getWheels() {
+-        return 0;
+-    }
+-
+-    @Override
+-    public int getKm() {
+-        return km;
+-    }
+-
+-    public int getKmFromLastManutenction() {
+-        return kmFromLastManutenction;
+-    }
+-
+-
+-    @Override
+-    public String getLicensePlate() {
+-        return targa;
+-    }
+-
+-    @Override
+-    public int manutenction(){
+-        System.out.println("Manutenzione");
+-        this.kmFromLastManutenction=0;
+-        return 0;
+-    }
+-}
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Index: oop_dimes/java/oop/garage/Manutentable.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/Manutentable.java b/oop_dimes/java/oop/garage/Manutentable.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/Manutentable.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,26 +0,0 @@
+-package oop.garage;
+-
+-public interface Manutentable {
+-    int nextManutenction();
+-    int manutenction();
+-
+-    static boolean eseguiManutenzioneLista(Manutentable[] list){
+-        for (int i = 0; i < list.length; i++) {
+-            list[i].manutenction();
+-        }
+-        return true;
+-    }
+- }
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+Index: oop_dimes/java/oop/garage/ParcoVeicoli.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/ParcoVeicoli.java b/oop_dimes/java/oop/garage/ParcoVeicoli.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/ParcoVeicoli.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,16 +0,0 @@
+-package oop.garage;
+-
+-public class ParcoVeicoli {
+-    public static void main(String[] args) {
+-        Moto m= new Moto(1000,500,200,2,"Ducati","V4","AX532");
+-        Macchina m2=new Macchina(2000,10400,900,4,"fiat","panda","A35232");
+-        Camion c= new Camion(true,100000,5000,2,"IVECO","V324","AAAA333");
+-
+-        Manutentable[] list={m,m2,c};
+-        boolean b = Manutentable.eseguiManutenzioneLista(list);
+-
+-
+-
+-
+-    }
+-}
+Index: oop_dimes/java/oop/garage/Moto.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/Moto.java b/oop_dimes/java/oop/garage/Moto.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/Moto.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,33 +0,0 @@
+-package oop.garage;
+-
+-public class Moto extends MantainibleVehicle{
+-    private final int cilindrata;
+-
+-    public Moto(int cilindrata,int km, int kmFromLastManutenction, int ruote, String marca, String modello, String targa) {
+-        super(km, kmFromLastManutenction, ruote, marca, modello, targa);
+-        this.cilindrata=cilindrata;
+-    }
+-
+-    public int getCilindrata() {
+-        return cilindrata;
+-    }
+-
+-    @Override
+-    public String details() {
+-        return super.details();
+-    }
+-
+-    @Override
+-    public int nextManutenction() {
+-        int manutenzione=500;
+-
+-        return manutenzione-super.getKmFromLastManutenction();
+-    }
+-    @Override
+-    public int manutenction(){
+-        super.manutenction();
+-        System.out.println("Manutenzione Moto");
+-        System.out.println("Cambio Freni, Catena, Forcella...");
+-        return 0;
+-    }
+-}
+Index: oop_dimes/java/oop/garage/Macchina.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/Macchina.java b/oop_dimes/java/oop/garage/Macchina.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/Macchina.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,24 +0,0 @@
+-package oop.garage;
+-
+-public class Macchina extends MantainibleVehicle{
+-    private int posti;
+-    public Macchina(int post,int km, int kmFromLastManutenction, int ruote, String marca, String modello, String targa) {
+-        super(km, kmFromLastManutenction, ruote, marca, modello, targa);
+-        this.posti=posti;
+-    }
+-
+-    @Override
+-    public int nextManutenction() {
+-        return 1000-super.getKmFromLastManutenction();
+-    }
+-
+-    @Override
+-    public int manutenction() {
+-        super.manutenction();
+-        System.out.println("Manutenzione Macchina");
+-        System.out.println("Cambio Freni, Radiatore, Olio...");
+-
+-        return 0;
+-    }
+-
+-}
+Index: oop_dimes/java/oop/garage/Vehicle.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/Vehicle.java b/oop_dimes/java/oop/garage/Vehicle.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/Vehicle.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,14 +0,0 @@
+-package oop.garage;
+-
+-import java.util.Vector;
+-
+-public interface Vehicle {
+-    default String details(){
+-        return getName()+", "+getKm()+" KM Plate:"+getLicensePlate();}
+-    String getName();
+-    int getWheels();
+-    int getKm();
+-    String getLicensePlate();
+-
+-}
+-
+Index: oop_dimes/java/oop/garage/Camion.java
+===================================================================
+diff --git a/oop_dimes/java/oop/garage/Camion.java b/oop_dimes/java/oop/garage/Camion.java
+deleted file mode 100644
+--- a/oop_dimes/java/oop/garage/Camion.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ /dev/null	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
+@@ -1,30 +0,0 @@
+-package oop.garage;
+-
+-public class Camion extends MantainibleVehicle{
+-    boolean rimorchio;
+-    public Camion(boolean rimorchio,int km, int kmFromLastManutenction, int ruote, String marca, String modello, String targa) {
+-        super(km, kmFromLastManutenction, ruote, marca, modello, targa);
+-        this.rimorchio=rimorchio;
+-
+-    }
+-
+-    public boolean getRimorchio() {
+-        return rimorchio;
+-    }
+-
+-    @Override
+-    public int nextManutenction() {
+-        return 5000-super.getKmFromLastManutenction();
+-    }
+-
+-    @Override
+-    public int manutenction(){
+-       super.manutenction();
+-       //if(rimorchio){
+-           //paga di più
+-
+-       //}
+-
+-        return 0;
+-    }
+-}
+Index: oop_dimes/java/oop/test/SC.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package oop.test;\r\n\r\npublic class SC {\r\n    private final int value;\r\n\r\n    public SC(int value) {\r\n        this.value = value;\r\n    }\r\n\r\n    public int getValue() {\r\n        return value;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/oop_dimes/java/oop/test/SC.java b/oop_dimes/java/oop/test/SC.java
+--- a/oop_dimes/java/oop/test/SC.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ b/oop_dimes/java/oop/test/SC.java	(date 1731518487107)
+@@ -1,4 +1,4 @@
+-package oop.test;
++package test;
+ 
+ public class SC {
+     private final int value;
+Index: oop_dimes/java/oop/test/C.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package oop.test;\r\n\r\npublic class C extends SC{\r\n    private int subValue=0;\r\n    public C(){\r\n        super(0);\r\n    }\r\n\r\n    public C(int v,int sv){\r\n\r\n        super(v);\r\n\r\n        this.subValue=sv;\r\n    }\r\n\r\n    @Override\r\n    public String toString() {\r\n        return \"value=\"+getValue()+ \"  subvalue=\"+subValue;\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/oop_dimes/java/oop/test/C.java b/oop_dimes/java/oop/test/C.java
+--- a/oop_dimes/java/oop/test/C.java	(revision 46b33c861d3d306985588ea5b928f99d7e74b204)
++++ b/oop_dimes/java/oop/test/C.java	(date 1732535336676)
+@@ -1,4 +1,4 @@
+-package oop.test;
++package test;
+ 
+ public class C extends SC{
+     private int subValue=0;

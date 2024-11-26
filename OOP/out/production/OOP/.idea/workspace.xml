@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="3" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3b39c882-34dd-4527-b3e2-ab48d2501c03" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/oop_dimes/file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/oop_dimes/java/oop/cipher/file.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/Camion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/Macchina.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/MantainibleVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/Manutentable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/Moto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/ParcoVeicoli.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/garage/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/test/C.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_dimes/java/oop/test/C.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oop_dimes/java/oop/test/SC.java" beforeDir="false" afterPath="$PROJECT_DIR$/oop_dimes/java/oop/test/SC.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Exception" />
+        <option value="Record" />
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/oop_dimes" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Lezione6/Appunti.txt" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Lezione6/Base.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Lezione6/Person.java" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Lezione6/Student.java" root0="SKIP_INSPECTION" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2n6vnndhLyOB0Xk7b3iFcXUXbYg" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.CodificaCesare.executor": "Run",
+    "Application.Esempio.executor": "Run",
+    "Application.Esercitazione2.Main.executor": "Run",
+    "Application.Esercitazione4.Main.executor": "Run",
+    "Application.GUI.executor": "Run",
+    "Application.Lezione12.Main.executor": "Run",
+    "Application.Lezione14.Main.executor": "Run",
+    "Application.Lezione15.Main.executor": "Run",
+    "Application.Lezione16.Main.executor": "Run",
+    "Application.Lezione7.Main.executor": "Run",
+    "Application.Lezione8.Main.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.TestAutoclose (2).executor": "Run",
+    "Application.TestAutoclose.executor": "Run",
+    "Application.TestCarte.executor": "Run",
+    "Application.TestOperation.executor": "Run",
+    "Application.TestRange.executor": "Run",
+    "Application.TestRecord.executor": "Run",
+    "Application.TestThrowable.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "full.screen.before.presentation.mode": "false",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Program Files/Java/jdk-23",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\vinci\Desktop\Algorythms\JavaAlgorythms\OOP\oop_dimes\java\oop\cipher" />
+      <recent name="C:\Users\vinci\Desktop\Algorythms\JavaAlgorythms\OOP\Lezione17" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="oop_dimes.java" />
+      <recent name="JavaAlgorythms" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Lezione13" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CodificaCesare">
+    <configuration name="CodificaCesare" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="oop.cipher.CodificaCesare" />
+      <module name="OOP" />
+      <option name="PROGRAM_PARAMETERS" value="-e file.txt enc.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="oop.cipher.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Esempio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lezione17.Esempio" />
+      <module name="OOP" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\vinci\Desktop\Algorythms\JavaAlgorythms\OOP\Lezione17\Dati.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lezione17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Esercitazione2.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Esercitazione2.Main" />
+      <module name="OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Esercitazione2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Lezione7.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lezione7.Main" />
+      <module name="OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lezione7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lezione5.Main" />
+      <module name="OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lezione5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestAutoclose" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lezione17.TestAutoclose" />
+      <module name="OOP" />
+      <option name="PROGRAM_PARAMETERS" value="C:\Users\vinci\Desktop\Algorythms\JavaAlgorythms\OOP\Lezione17\Dati.txt" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lezione17.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestThrowable" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lezione7.TestThrowable" />
+      <module name="OOP" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lezione7.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestAutoclose" />
+      <item itemvalue="Application.CodificaCesare" />
+      <item itemvalue="Application.Esempio" />
+      <item itemvalue="Application.Esercitazione2.Main" />
+      <item itemvalue="Application.Lezione7.Main" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.TestThrowable" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CodificaCesare" />
+        <item itemvalue="Application.Esempio" />
+        <item itemvalue="Application.Esercitazione2.Main" />
+        <item itemvalue="Application.TestThrowable" />
+        <item itemvalue="Application.Lezione7.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3b39c882-34dd-4527-b3e2-ab48d2501c03" name="Changes" comment="" />
+      <created>1728306509872</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1728306509872</updated>
+      <workItem from="1728306510890" duration="4302000" />
+      <workItem from="1728374840652" duration="684000" />
+      <workItem from="1728383327227" duration="1062000" />
+      <workItem from="1728389478847" duration="514000" />
+      <workItem from="1728390017804" duration="1737000" />
+      <workItem from="1728553197725" duration="5763000" />
+      <workItem from="1728898719227" duration="4928000" />
+      <workItem from="1728974097463" duration="6118000" />
+      <workItem from="1729157980035" duration="5427000" />
+      <workItem from="1729164377628" duration="5000" />
+      <workItem from="1729502922329" duration="4835000" />
+      <workItem from="1729579502606" duration="545000" />
+      <workItem from="1729580087846" duration="4401000" />
+      <workItem from="1730114883710" duration="2871000" />
+      <workItem from="1730371285785" duration="5104000" />
+      <workItem from="1731320928674" duration="832000" />
+      <workItem from="1731322086310" duration="4773000" />
+      <workItem from="1731327644122" duration="13000" />
+      <workItem from="1731331576017" duration="502000" />
+      <workItem from="1731514615611" duration="4350000" />
+      <workItem from="1731580234283" duration="6144000" />
+      <workItem from="1731599032133" duration="262000" />
+      <workItem from="1731599982532" duration="2840000" />
+      <workItem from="1731861019010" duration="2964000" />
+      <workItem from="1731925985508" duration="5877000" />
+      <workItem from="1732269162061" duration="8366000" />
+      <workItem from="1732356250873" duration="6722000" />
+      <workItem from="1732530170387" duration="6612000" />
+      <workItem from="1732606037719" duration="52000" />
+      <workItem from="1732606178490" duration="3398000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.InputMismatchException" package="java.util" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
