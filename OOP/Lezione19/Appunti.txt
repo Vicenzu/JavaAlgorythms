@@ -1,0 +1,50 @@
+STREAM
+Da non confondere con gli IOStream
+Servono a creare flussi di oggetti (es. Flusso di dati a partire da un array)
+Da una collezione si può sempre ottenere un flusso, iterando sulla collezione
+
+Esiste un'interfaccia Stream<T> (java.util.stream)
+
+Optional<T> è un oggetto che ci fa evitare NullPointerException, esso può contenere al suo interno l'oggetto cercato
+oppure null (Poiché contiene al suo interno un oggetto e quindi anche se null rimane sempre un oggetto)
+
+
+
+SERIALIZATION
+Si tratta di memorizzare degli oggetti su file per potervi accedere in un secondo momento, ma non nasce per questo
+ scopo: nasce per poter permettere il trasferimento di oggetti ma non per long-term storage, per cui è altamente
+ sconsigliato l'utilizzo della serializzazione, in quanto il suo meccanismo è altamente dinamico sia rispetto
+ alla versione della jvm che rispetto alla versione del nostro programma.
+ Quindi risulta utile definire un formato rappresentazione standard
+
+Gli oggetti devono implementare Serializable
+Quando spediamo nello stream, viene creato un numero di serie che permette di ricreare la costruzione dello stream
+ se il numero di serie è incontrato per la prima volta, lo salvo nello stream, altrimenti utilizzo quello già
+ salvato
+
+Es.
+    Employee = Harry
+    Manager = (Carl, secretary= Harry)
+    Manager = (Paul, secretary= Harry)
+
+    Verranno, per esempio, serializzati in questo modo
+    1)serial number = 1
+      Name= harry
+
+    2) serial number = 2
+       Name Carl
+       secretary = object 1
+
+    3) serial number = 3
+       Name Paul
+       secretary = object 1
+
+
+ObjectOutputStream si tiene conto di una mappa con Object e long (serial number). (Tiene anche in memoria il tipo
+ specifico dell'oggetto)
+
+Quando facciamo la deserializzazione, gli oggetti deserializzati saranno una copia dell'oggetto originale,
+quindi non l'oggetto stesso
+
+Se non volessimo serializzare un campo, lo markiamo come TRANSIENT e nella deserializzazione sarà null
+La serializzazione può essere personalizzata.
