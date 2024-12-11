@@ -1,4 +1,5 @@
 package Lezione4;
+import java.awt.*;
 import java.util.Objects;
 
 import static java.lang.Math.*;
@@ -6,7 +7,7 @@ import static java.lang.Math.*;
 /* per implementare l'interfaccia faccio come segue: (per mantenere la promessa TOTALMENTE)*/
 
                               ////////////////// posso anche implementare più interfacce
-public class CartesianPoint2D extends AbstractPoint2D implements Point2D {
+public class CartesianPoint2D extends AbstractPoint2D implements Point2D, Cloneable{
     private double x;
     private double y;
 
@@ -19,6 +20,11 @@ public class CartesianPoint2D extends AbstractPoint2D implements Point2D {
     public CartesianPoint2D() {
     }
 
+    //Costruttore per copia
+    public CartesianPoint2D(Point2D cp) {
+        this.x = cp.getX();
+        this.y = cp.getY();
+    }
 
     @Override
     public double getMod() {
@@ -68,4 +74,31 @@ public class CartesianPoint2D extends AbstractPoint2D implements Point2D {
     public int hashCode() {
         return Objects.hash(x,y);
     }
+
+    @Override
+    public Object clone() {
+        try {
+            return super.clone();
+        } catch (CloneNotSupportedException e) {
+            throw new Error(e);
+        }
+    }
+
+//    @Override     //Possiamo anche restituire direttamente un CartesianPoint2D (non consigliato)
+//    public CartesianPoint2D clone() {     //facciamo il cast direttamente dentro il metodo
+//        try {
+//            return (CartesianPoint2D) super.clone();
+//        } catch (CloneNotSupportedException e) {
+//            throw new Error(e);
+//        }
+//    }
+
+        // Facciamo finta che vogliamo implementarlo in maniera differente
+//        @Override
+//        public Object clone() {
+//            return new CartesianPoint2D(this)
+//        }
+// è sbagliato poichè se andiamo a fare la clone di un oggetto erede di CartesianPoint2D sarà definito come
+// CartesianPoint2D quindi cambiamo il tipo dell'oggetto. Ciò si può fare solo se la classe è final
+
 }

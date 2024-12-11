@@ -1,0 +1,15 @@
+In java per usare le espressioni regolari bisogna importare il package java.util.regex
+L'espressione viene compilata e riconosciuta da un automa a stati finiti, in quanto per ogni regex esiste
+un automa che è in grado di riconoscerla.
+
+La classe Pattern in particolare compila la regex tramite il metodo statico compile. (Dipende dalla regex)
+L'oggetto Matcher va a fare i match per la stringa che riceve in input. Possiamo anche utilizzare Pattern.match()
+
+
+
+L'inheritance può essere blocata, ovvero possiamo definire gli unici tipi possibili utilizzando l'espressione
+ "sealed". Le classi permitted dovranno essere sealed, non-sealed o final
+
+       es.
+       public sealed interface DocumentElement permits CompositeDocumentElement, Paragraph
+

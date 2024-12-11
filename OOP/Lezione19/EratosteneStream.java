@@ -14,11 +14,16 @@ public class EratosteneStream {
                                         // utilizziamo gli stream per utilizzare il metodo noneMatch()
                 .forEach(prime :: add);
 
+        prime.forEach(nome -> System.out.printf("%5d", nome));
+        System.out.println();
+
+        LinkedList<Integer> prime1 = new LinkedList<>();
+        prime1.add(2);
+
         //modo più criptico che alla fine stampa direttamente
         IntStream.iterate(3, n-> n<=N, x-> x+2)
-                .filter(x-> prime.stream().noneMatch(p-> x%p==0))
-                .forEach(((IntConsumer) prime :: add).andThen(x-> System.out.printf("%5d", x)));
+                .filter(x-> prime1.stream().noneMatch(p-> x%p==0))
+                .forEach(((IntConsumer) prime1 :: add).andThen(x-> System.out.printf("%5d", x)));
                         //Per utilizzare andThen dobbiamo fare il cast a IntConsumer
-
     }
 }
