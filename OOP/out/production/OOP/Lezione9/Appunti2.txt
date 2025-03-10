@@ -1,0 +1,45 @@
+RELAZIONE D'ORDINE
+
+R è una relazione d'ordine se è
+-antisimmetrica
+    ovvero se R(a,b) è vera SE E SOLO SE R(b,a) è falsa
+        es. minore e maggiore
+
+-transitiva
+    ovvero se R(a,b) e R(b,c) allora (implicazione) R(a,c)
+
+
+inoltre è TOTALE se per ogni coppia dell'insieme posso definire quella relazione. Ovvero che per
+ogni coppia dell'insieme posso sempre stabilire che a precede b, o viceversa.
+
+Ad esempio tra punti di un piano cartesiano, NON è DEFINITA una relazione d'ordine  (non posso
+stabilire se un punto è minore di un altro). Tuttavia, possiamo definirne una noi se, per esempio,
+per noi un punto è minore di un altro in base alla distanza dall'origine, ovvero in base al modulo.
+Soddisfa le proprietà?
+-è antisimmetrica? si
+-è transitiva? si.
+Quindi apposto, può essere una relazione d'ordine.
+
+
+
+
+
+
+TIPI GENERICI
+Funziona a COMPILAZIONE, dove viene usato il tipo più generico possibile (attenzione, non sempre
+object) - si chiama cancellazione dei tipi - TYPE ERASURE
+
+ATTENZIONE! Pair<Supertipo>, a tempo di compilazione, NON è superclasse di Pair<Sottotipo>
+
+
+Interface Comparable<T>, se implementata bisogna implementare il metodo int compareTo(T o)
+
+Quando la nostra classe non ha un comportamento naturale (es Point2D), è opportuno introdurre
+il Comparator, vedi Point2DModComparator.
+
+REGOLA GENERALE -> Se vogliamo un solo modo per confrontare gli oggetti di una classe, allora
+semplicemente implementiamo l'interfaccia Comparable e impostiamo il compareTo.
+Se invece vogliamo PIù MODI per fare le comparison (nell'esempio di Point2D, potrei volerli
+confrontare per modulo, oppure per coordinata x, oppure per coordinata y, oppure per angolo)
+allora lì posso creare diverse classi che implementano Comparator e per ogni classe impostare
+un metodo compare che mi confronta in base al criterio che voglio io in quel caso.

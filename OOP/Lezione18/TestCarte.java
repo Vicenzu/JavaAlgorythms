@@ -1,7 +1,5 @@
 package Lezione18;
 
-import java.util.function.BiFunction;
-
 public class TestCarte {
     public static void main(String[] args) {
         CartaNapoletana c1 = new CartaNapoletana(Valore.DUE, Seme.ORO);

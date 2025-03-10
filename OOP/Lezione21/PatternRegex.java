@@ -17,8 +17,7 @@ public class PatternRegex {
                 System.out.println(matcher.start() + ":" + matcher.end() + "[" + "...");
             }
         }
-
-
+        
 
     }
 }

@@ -1,0 +1,35 @@
+RECORD
+Definisce oggetti immutabili, quindi è una classe final e inoltre non può essere estesa nè può estendere altre
+classi ma può implementare delle interfacce.
+
+I record hanno già definiti i metodi ereditati dalla classe object, dove due oggetti sono
+Nei record non è necessario definire le variabili d'istanza, perchè le definiamo implicitamente e dunque lui fa
+in automatico i getter e tutti i metodi di Object (toString, hashCode, ecc...)
+I record sono utili anche perchè l'equals viene fatto in modo corretto (non fa l'==), e anche l'hashCode
+
+Si può controllare la costruzione di un record riscrivendo il costruttore:
+
+    public Monomial {
+        if (degree<0) throw new NegativeDegreeException(degree);
+    }
+
+
+Inoltre possiamo anche fare l'override dei metodi di object per personalizzarli
+
+STRINGBUILDER
+Lo StringBuilder è utile per creare delle Stringhe in modo dinamico ed efficiente, funziona in maniera simile
+a un arrayList, quindi ogni volta che facciamo un append() aggiunge alla fine della stringa che tiene l'array
+e inoltre, si possono concatenare più append
+
+ENUMERATION
+per tipi di dati che possono assumere un numero finito di valori, e quindi istanze
+
+Non si può implementare comparable perchè le ordina automaticamente in base all'ordine con il quale vengono
+definite
+
+
+SWITCH
+case 3:
+
+è il più brutto perchè ereditato da c, perchè entra nel primo case che ci entra e si ferma solo al BREAK,
+altrimenti continua

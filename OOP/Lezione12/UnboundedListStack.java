@@ -1,7 +1,5 @@
 package Lezione12;
 
-import oop.range.Range;
-
 public class UnboundedListStack<E> implements Stack<E> {
     private int size = 0;
     private Node<E> head = null;

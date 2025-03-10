@@ -1,0 +1,40 @@
+COME IMPLEMENTARE IL METODO HASHCODE
+Se si ridefinisce il metodo equals DOBBIAMO ridefinire anche l'hashCode
+
+Prima di tutto ci dobbiamo soffermare sul metodo equals e vedere che informazioni prende in considerazione,
+quindi l'hashCode prenderà sempre le stesse informazioni.
+
+
+@Override
+public int hashCode() {
+    int res = 17; //valore costante iniziale (per comodità numero primo)
+
+    //Es. con valore booleano
+    if (b) res = 31*res+1;   //scegliamo un altro numero primo con il quale verrà moltiplicato il vecchio
+    else res = 31*res;
+}
+
+Linee Guida
+    1) Se boolean
+        true -> 1
+        false -> 0
+
+    2) Se short,char,byte,int
+        (int)v  facciamo il casting
+
+    3) Se long
+        (int)(f^(f>>>32)) fa lo shift a destra
+
+    4) Se float
+        usiamo il metodo della classe Float -> Float.floatToIntBits(f)
+        prende la rappresentazione binaria e lo trasforma in int
+
+    5) Se double
+        lo trasformiamo in long e poi facciamo l'hashCode per il long -> Double.doubleToLongBits(f)
+
+    6) Se è un oggetto
+        se null -> 0
+        altrimenti il suo hashCode
+
+    7) Se array
+        considera ogni elemento dell'array come un campo separato

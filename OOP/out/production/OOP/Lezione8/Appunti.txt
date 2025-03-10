@@ -1,0 +1,19 @@
+RELAZIONE D'ORDINE
+Per essere considerata tale, una relazione deve soddisfare queste condizioni:
+    - Antisimmetria - R(a,b) <-> not(R(b,a)), a<b <-> b>a
+    - Transitività - a<b<c <-> a<c
+
+Inoltre è totale se per ogni coppia dell'insieme posso definire questa relazione, sarà parziale se non possiamo
+fare questa cosa.
+
+TIPI GENERICI
+Funziona a compilazione, dove viene utilizzato il tipo più generico possibile (non sempre Object) - si chiama
+cancellazione dei tipi
+
+Se vogliamo implementare una relazione d'ordine, dovremo utilizzare l'interfaccia Comparable<T>
+
+La classe Comparator<T> è un'interfaccia che ci permette di definire un metodo compare che prende in input
+due variabili di stesso tipo
+
+Nel caso in cui due tipi non sono ordinabili in maniera elementare allora sarà opportuno implementare un
+comparator da fornire al metodo di sort per esempio

@@ -49,8 +49,8 @@ public double distance(Point2D p) {
 /* non posso usare p.x in quanto NON è di tipo CartesianPoint2D, ma si rifà all'interfaccia Point2D
 * che NON ha una variabile di istanza x (o y)
 */
-double dx = getX() - p.getX();
-double dy = getY() - p.getY();
+double dx = this.x - p.getX();
+double dy = this.y - p.getY();
 return sqrt(dx*dx + dy*dy);
 }
 

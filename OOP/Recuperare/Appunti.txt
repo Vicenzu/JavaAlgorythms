@@ -1,0 +1,18 @@
+Il modulo pickle ci fornisce un metodo semplice per serializzare e deserializzare gli oggetti in
+Python. (estensione .pkl)
+
+    pickle.dump(obj, file)
+    pickle.load(file)
+
+IMPORTANTE: la lettura e scrittura è BINARIA (vanno usati wb e rb)
+
+Il with aiuta nella gestione del file in quanto è contenuto al suo interno già una gestione delle
+possibili eccezioni IO e inoltre il file viene chiuso automaticamente
+
+
+Il modulo pickle, tuttavia, è specifico per Python e non è compatibile con altri linguaggi di
+programmazione, infatti non è molto usato.
+    Molto più usati sono i formati json, mashal e dill.
+
+
+ESERCIZIO: magazzino su python

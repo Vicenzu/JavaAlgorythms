@@ -1,0 +1,15 @@
+Correzione dell'equals di CartesianPoint2D perchè non soddisfava le condizioni di uguaglianza ovvero:
+    -riflessiva
+    -transitiva
+    -simmetrica
+
+Ritorniamo alla classe stack (lezione 12)
+
+Le WildCard si utilizzano per far si che gli elementi che vogliamo utilizzare siano anche sottotipi di E e non
+per forza proprio di tipo E
+
+Per far si di utilizzare bene le WildCards c'è un acronimo che spiega (PECS) "Producer extends, Consumer Super"
+
+Quando facciamo extends o super nelle WildCards stiamo mettendo un bound, rispettivamente lower e upper bound
+
+NON possiamo assegnare a una variabile il tipo sconosciuto delle WildCards

@@ -9,7 +9,7 @@ public class Ellipsis {
         }
     }
 
-    public static void Main(String[] args) {
+    public static void main(String[] args) {
         m(1, 2, 3, 4);
     }
 }

@@ -1,0 +1,10 @@
+Gli ARRAY in java NON sono come in linguaggi tipo C o Assembly, in cui vengono riservate delle locazioni
+di memoria contigue. Si tratta infatti di una classe con dei metodi propri, rendendola molto più pesante.
+
+
+import java.lang.*     è un qualcosa che viene fatto di default
+Si tratta di un package che contiene classi ad esempio Math
+
+
+import static java.lang.Math.sqrt.;
+-mi permette di utilizzare il metodo sqrt() senza specificare il Math. come prefisso

@@ -1,0 +1,36 @@
+LIBRERIA STANDARD DI JAVA
+
+---Interfaccia Iterator<E> (di java.util)---
+ha due operazioni che NON sono di default, ovvero next() e hasNext(), quindi dovremo definirli da noi
+Un iteratore è un oggetto che serve da cursore per una struttura dati.
+ - hasNext() semplicemente ci dice se c'è un elemento successivo
+ - next() ci restituisce l'elemento successivo e fa avanzare il cursore, quindi fa due operazioni
+
+Se facciamo next() e hasNext()=false (ma non controlliamo se hasNext()) allora java ci solleverà la
+RunTimeException NoSuchElementException
+
+ - remove() deve sempre essere preceduta da una next() e rimuove l'ultimo elemento restituito da next(). NON POSSO FARE 2 REMOVE DI SEGUITO
+
+---Interfaccia Iterable<T>---
+viene implementata su una struttura sulla quale si può iterare, che dunque può restituire un iterator
+l'unico metodo che ci interessa e dobbiamo implementare è iterator(), che crea un iteratore e lo restituisce
+
+Se viene implementata l'interfaccia si può utilizzare il foreach che utilizza dietro le quinte un iterator()
+
+In python quando facciamo for i in range(), il range() è un oggetto
+Si può fare la stessa cosa in java
+
+INNER CLASSES
+In java possiamo dichiarare una classe dentro un'altra (sia pubblica che privata). Le classi interne, se private,
+possono essere istanziate solo nella classe che le contiene, se pubbliche invece, possono essere viste anche
+dall'esterno e gli oggetti dell'innerClass possono essere inizializzati all'esterno come Outer.Inner() (per esempio)
+quando la andiamo a inizializzare dovremo fare:
+        Outer o = new Outer()
+        Outer.I v = o.newI()
+
+Perché essendo legata in maniera stretta alla classe Outer, gli oggetti devono essere creati come Outer prima.
+
+Possiamo fare riferimento a un oggetto della classe Outer con Outer.this
+
+Esistono anche le InnerClass STATICHE, che non può accedere alle variabili d'istanza della classe madre poichè
+non legate strettamente alla classe madre, quindi si può fare Outer.Inner = new OuterInner()

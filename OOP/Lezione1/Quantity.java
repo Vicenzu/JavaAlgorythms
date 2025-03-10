@@ -1,7 +1,7 @@
 package Lezione1;
 
 // creiamo la classe quantità
-/*NON possiamo utilizzare un semplice int in quanto potrebbe assumere valori non utilizzabili, 
+/* NON possiamo utilizzare un semplice int in quanto potrebbe assumere valori non utilizzabili,
  * perciò usiamo il final int che ci obbliga a inizializzare il valore nel costruttore o direttamente nell'istanza
 */
 

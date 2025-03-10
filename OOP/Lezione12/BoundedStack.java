@@ -1,7 +1,5 @@
 package Lezione12;
 
-import oop.range.Range;
-
 public class BoundedStack <E> implements Stack<E> {
     private final Object[] data; //se mettiamo come tipo E[] dobbiamo fare il casting nel costruttore
     private int topIndex;

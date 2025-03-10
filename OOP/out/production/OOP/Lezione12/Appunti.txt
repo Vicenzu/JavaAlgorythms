@@ -1,0 +1,32 @@
+L'interfaccia Collection che è erede di Iterable, eredita tre interfacce List, Set, Queue.
+Set eredita SortedSet
+Queue eredita DeQueue
+
+L'interfaccia Map eredita SortedMap
+L'interfaccia Iterator eredita ListIterator
+
+
+
+L'interfaccia Collection<E> ha i seguenti metodi:
+    Iterator<E> iterator();
+    int size();
+    boolean isEmpty();
+    boolean contains(Object o);
+    boolean containsAll(Collection<?> other)
+    boolean add (Object el);  //restituisce true se apporta modifiche alla collection
+    boolean addAll(Collection <...poi ci spiega> other);
+    boolean remove(Object el);
+    boolean removeAll(Collection<?> other);
+    void clear();
+    boolean retainAll(Collection<?> other);  //mantiene solo gli elementi dell'altra collezione
+    Object[] toArray();
+
+Per facilitare l'implementazione dell'interfaccia Collection esiste la classe astratta AbstractCollection,
+che implementa già la maggior parte dei metodi
+
+Collection <--- AbstractCollection
+
+La List (che è erede di Collection) è differente da una Collection perché gli elementi occupano una posizione
+ben precisa
+
+C'è anche AbstractList che è più specifica per le List

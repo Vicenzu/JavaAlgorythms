@@ -1,0 +1,64 @@
+Due tipi di stream in Java:
+    1) Stream di I/O
+    2) altro Stream
+
+
+
+
+-----I/O Stream-----
+abstract int read() per leggere un byte (InputStream)
+abstract void write(int b) per scrivere un byte (OutputStream)
+
+(byte anche se int - ci arriviamo tra poco)
+
+Una sorgente può essere un file, un'area di memoria, la rete, ecc.
+
+Questi concetti sono in java.io nelle due classi InputStream e OutputStream
+
+readAllBytes() legge tutti i byte disponibili e li restituisce in un array di byte;
+al write() invece posso anche passargli un array di byte -> write(bytes).
+
+La classe InputStream ha come unico metodo astratto read(), che alla fine restituisce -1
+
+    E se il byte che voglio leggere è proprio -1?
+ Il -1 che ha finito è un -1 a 32-bit, che è diverso dal -1 a 8-bit da leggere
+ 0x000000FF -> lettura del valore -1
+ 0xFFFFFFFF -> fine lettura
+
+Dunque ogni lettura verifico se è == -1 (l'intero -1), e se non è verificato, allora posso continuare
+con la lettura nel seguente modo:
+    byte b = (byte)in.read();
+che è safe in quanto se non ha terminato, la lettura sarà un byte e posso fare il casting
+
+Il metodo int read(byte[] b) legge i byte dall'array e restituisce il numero (int) di byte che è
+effettivamente riuscito a leggere (che potrebbe essere inferiore alla lunghezza dell'array)
+
+
+L'InputStream può o non supportare il Marker, una sorta di segnalibro utile per ritornare poi
+indietro nella lettura
+
+
+
+L'OutputStream ha il metodo flush() che fa svuotare il buffer dal sistema operativo inviando
+i dati a destinazione.
+Il metodo close() fa il flush() e chiude lo stream.
+
+
+Quando facciamo il System.out.println in realtà stiamo utilizzando un OutputStream di tipo
+PrintStream.
+Analogamente, quando usiamo lo Scanner, gli passiamo System.in, che è un InputStream
+
+
+I File possono essere aperti in modalità non-append (ne sostituisco il contenuto) oppure in
+modalità append, dove il contenuto viene aggiunto alla fine.
+
+
+
+
+
+--Random Access Files--
+I files sono equiparabili a degli array, dunque posso accedervi a posizione casuale tramite la
+classe RandomAccessFile
+
+    var inOut = new RandomAccessFile("employee.dat", "rw");
+    inOut.seek( (n-1)*RECORD_SIZE );

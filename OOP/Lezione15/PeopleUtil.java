@@ -4,7 +4,7 @@ import java.util.List;
 
 public class PeopleUtil {
 
-    //Facendo in questo modo possiamo prendere in input anche con un metodo statico u tipo generico
+    //Facendo in questo modo possiamo prendere in input anche con un metodo statico un tipo generico
     //Inoltre se mettiamo Comparable<T>, l'oggetto può essere anche un sottotipo di t COMPARABLE
     //<T extends Comparable<? super T>> 
     /**

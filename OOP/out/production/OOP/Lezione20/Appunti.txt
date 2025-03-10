@@ -1,0 +1,79 @@
+METODO CLONE()
+Un metodo importante della classe Object è il metodo clone(), che a differenza degli altri metodi è un metodo
+ protected. Al metodo clone non interessa il tipo di oggetto ma viene fatta una copia byte a byte dell'area
+ di memoria (diverso dal costruttore per copia).
+Quindi nella clonazione si ha una copia superficiale, se volessimo ottenere una clonazione profonda allora dovremo
+ ridefinire il metodo clone().
+Come capiamo se andare in profondità o meno?
+Se l'oggetto è mutabile occorre andare in profondità, in caso contrario no.
+
+Il metodo clone() restituisce un object, quindi se noi dobbiamo clonare un oggetto di una classe specifica, o
+utilizziamo il tipo "var" oppure dovremo fare il cast al tipo che ci interessa.
+
+**Ritorniamo alla classe CartesianPoint2D lezione 4
+
+Il metodo clone() lancia una CloneNotSupportedException, checked
+    nel catch non lancio una RuntimeException perché so che deve essere istanza di Cloneable quindi sarà un
+    Error generico
+
+
+La prima istruzione di clone() è un istanceof Cloneable, quindi per evitare che ci lanci l'eccezione dovremo
+implementare l'interfaccia marker Cloneable
+
+Se noi implementiamo il metodo clone() nella superclasse, quando creeremo una sottoclasse erediterà proprio quello
+della superclasse e quindi conviene lasciare il metodo ereditato da Object nella superclasse in modo tale che
+quando farà l'instanceof riconoscerà l'oggetto.
+
+Prendendo come esempio le LinkedList, quando facciamo la clone, esso copierà i nodi ma non il contenuto, quindi
+rimarrà mutabile internamente. Quindi possiamo solo ridefinire la clone di una linkedList solo se essa è var
+d'istanza di una classe e dunque quando facciamo la clone possiamo crearne una da zero e clonare i singoli
+elementi all'interno
+
+    ES.
+        @Override
+        public Object clone() {
+            MyPoint2D cloned = (MyPoint2D) super.clone();
+            cloned.names = (LinkedList<String>) this.names.clone();
+            return cloned;
+        }
+
+
+Se la classe è la prima della gerarchia allora implementeremo la clone() come da manuale, quindi racchiudendo
+i comandi in un blocco try catch che utilizza super.clone().
+Nel caso in cui fosse un erede allora faremo prima la super.clone() e poi cambiamo il contenuto, come nell'esempio
+sopra
+
+
+ACCENNO ESPRESSIONE REGOLARE (regex101.com)
+L'espressione regolare serve a definire un linguaggio, quindi a dirci quali sono le stringhe valide in quel
+linguaggio
+
+    Es.
+        1) abcde        ovvero esattamente la stringa "abcde"
+
+        2) ^abcde       la riga deve cominciare esattamente con "abcde"
+
+        3) abcde$       la riga deve finire per "abcde"
+
+
+Flag "m" (multilinea) controlla se la stringa c'è in ogni linea, altrimenti controlla solo o all'inizio di tutto
+o alla fine
+
+
+        4) [a-z]        matcha tutte le lettere minuscole dell'alfabeto
+
+        5) [a-z][A-Z]   matcha solo le lettere minuscole seguite da una maiuscola
+
+        6) [a-zA-Z_]    matcha sia le lettere minuscole sia le maiuscole sia _
+
+        7) [a-zA-Z_][a-zA-Z_0-9]  matcha tutte le lettere minuscole, maiuscole, underscore seguite da
+                                  minuscole, maiuscole, underscore, numeri
+
+        8) [a-zA-Z_][a-zA-Z_0-9]* carattere della prima classe seguite da più caratteri della seconda classe
+
+        9) [^a-zA-Z_][a-zA-Z_0-9] l'^ dentro la classe è una negazione, quindi accetta tutte i caratteri non
+                                  appartenenti alla prima classe
+
+        10) \*          matcha esattamente il carattere *
+
+        11) [A-Z&&[ab]]     &&[] è intersezione di due classi
